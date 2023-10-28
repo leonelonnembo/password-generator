@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Generador de Contraseñas</title>
+    <title>Generador de Contraseñas y Validador de Fortaleza</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
     <div class="container">
         <h1>Generador de Contraseñas</h1>
         <div class="password-container">
-            <input type="text" id="password" placeholder="Contraseña" readonly>
+            <input type="text" id="generated-password" placeholder="Contraseña generada" readonly>
             <button id="generate">Generar Contraseña</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Validador de Fortaleza de Contraseña</h1>
+        <div class="password-container">
+            <input type="text" id="validated-password" placeholder="Introduce una contraseña" oninput="validarContrasena()">
+            <p id="fortaleza"></p>
         </div>
     </div>
 
